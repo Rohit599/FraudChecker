@@ -61,7 +61,7 @@ for number in number_generator(start_number):
             # time.sleep(2)
             number_str = str(number)
 
-            logging.info(f'Starting processing for number: {number_str}')
+            # logging.info(f'Starting processing for number: {number_str}')
 
             # Find the input field and enter the number
             input_field = driver.find_element(By.ID, 'ContentPlaceHolder1_idverify')
@@ -114,7 +114,8 @@ for number in number_generator(start_number):
             # Break out of the while loop if no exception occurred
             break
         except Exception as e:
-            logging.error(f"An error occurred with number {number_str}: {e}. Retrying...")
+            # logging.error(f"An error occurred with number {number_str}: {e}. Retrying...")
+            continue
 
     # Navigate back to the search page if needed
     driver.get('https://cybercrime.gov.in/Webform/suspect_search_repository.aspx')
