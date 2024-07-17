@@ -47,28 +47,13 @@ if os.path.isfile(progress_file_path):
     with open(progress_file_path, 'r') as f:
         start_number = int(f.read().strip())
 else:
-    start_number = 6000000000
-
-# Generate all 10-digit combinations (this is a huge number of combinations, so you may want to narrow it down)
-# Combine two ranges for iteration
-# Generator to yield numbers in the specified ranges
-# def number_generator():
-#     # Generate for numbers starting with 6,7,8,9 first
-#     for number in range(6000000000, 10000000000):
-#         yield number
-#     for number in range(1000000000, 6000000000):
-#         yield number
+    start_number = 7000000000
 
 # Generator to yield numbers in the specified ranges
 def number_generator(start):
-    for number in range(start, 7000000000):
+    for number in range(start, 6000000000, -1):
         yield number
-    # for number in range(1000000000, 6000000000):
-    #     yield number
 
-
-# for number in number_generator():  # Using generator
-# for number in range(6000000000, 6000000005):
 # Use the generator starting from the last processed number
 for number in number_generator(start_number):
     while True:
