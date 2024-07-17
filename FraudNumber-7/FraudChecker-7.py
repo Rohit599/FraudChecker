@@ -16,7 +16,7 @@ logging.basicConfig(filename='web_scraper-7.log', level=logging.INFO,
 
 # Initialize the WebDriver
 # Specify the path to the ChromeDriver
-chrome_driver_path = 'D:/FraudNumberReporter/chromedriver-win64/chromedriver.exe'  # Update the path
+chrome_driver_path = 'E:/FraudNumberReporter/chromedriver-win64/chromedriver.exe'  # Update the path
 # Initialize the Service object
 service = Service(chrome_driver_path)
 
@@ -28,7 +28,7 @@ options.add_argument("--start-maximized")
 driver = webdriver.Chrome(service=service, options=options)
 
 # Specify the path to the Tesseract executable
-pytesseract.pytesseract.tesseract_cmd = 'D:/Tesseract-OCR/tesseract.exe'  # Update the path
+pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'  # Update the path
 
 # Open the website
 driver.get('https://cybercrime.gov.in/Webform/suspect_search_repository.aspx')
