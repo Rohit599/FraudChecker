@@ -1,0 +1,10 @@
+sudo apt install python3
+pip3 install selenium pytesseract pillow pandas
+sudo apt install tesseract-ocr
+sudo apt install chromium-browser
+sudo apt install chromium-chromedriver
+
+
+#Running Command
+chmod +x FraudChecker.py
+python3 FraudChecker.py
