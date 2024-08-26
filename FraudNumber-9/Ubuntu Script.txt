@@ -4,6 +4,9 @@ sudo apt install tesseract-ocr
 sudo apt install chromium-browser
 sudo apt install chromium-chromedriver
 
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
 
 #Running Command
 chmod +x FraudChecker.py
